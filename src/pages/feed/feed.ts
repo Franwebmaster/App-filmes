@@ -17,6 +17,16 @@ export class FeedPage {
 	//Minhas Variaveis
 	public nome:string = 'Fran Barros';
 
+  //Meu JSON
+  public objetoFeed = {
+    nome: "Francisco Barros",
+    data: "19 agosto",
+    descricao: "Descrição sobre o filme",
+    gostei: "12",
+    qtd_comentarios: "4",
+    hora_comentario: "11h"
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
