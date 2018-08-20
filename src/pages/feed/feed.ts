@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FilmeProvider } from '../../providers/filme/filme';
 
 /**
  * Generated class for the FeedPage page.
@@ -12,8 +13,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-feed',
   templateUrl: 'feed.html',
+  providers: [
+    FilmeProvider
+  ]
 })
 export class FeedPage {
+
+  //Array de filmes 
+  public listaFilmes:[] = <any>[];
 	//Minhas Variaveis
 	public nome:string = 'Fran Barros';
 
@@ -27,23 +34,24 @@ export class FeedPage {
     hora_comentario: "11h"
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private filmeProvider: FilmeProvider) {
   }
 
-  //Minhas Functions
-  public alertaMeuNome(): void {
-  	alert('Francisco');
-  }
-
-  public somaDoisNumeros(x,y): number {
-  	var result = x + y;
-  	console.log(result);
-  	return result;
-  }
 
   ionViewDidLoad() {
     // this.alertaMeuNome();
     // this.somaDoisNumeros(1,3);
+    this.filmeProvider.ultimosFilmes().subscribe(
+        data=> {
+          //Transformando o data em qualquer coisa
+          const response = (data as any);
+          const objetoRetorno = JSON.parse(response._body);
+          this.listaFilmes = objetoRetorno.results;
+          console.log(objetoRetorno);
+        }, error => {
+          console.log(error);
+        }
+      )
   }
 
 }
