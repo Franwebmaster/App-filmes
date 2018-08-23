@@ -1,5 +1,12 @@
 page-slider {
-	ion-slide.slider img {
-	    width: 240px;
+	.swiper-pagination-bullet {
+		background: #E9E2D0;
+		opacity: 1;
+		transition: all ease-out 200ms;
+	}
+	.swiper-pagination-bullet-active {
+		width: 2rem;
+		border-radius: 5rem;
+		background: #E8630A;
 	}
 }

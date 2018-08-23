@@ -1,4 +1,4 @@
-![App Filmes](src/assets/imgs/readme-image.svg)
+![App Filmes](src/assets/imgs/readme-01.png)
 
 Movie Cine
 =============

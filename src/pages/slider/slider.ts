@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 import { TabsPage} from '../tabs/tabs';
+
+
 
 /**
  * Generated class for the SliderPage page.
@@ -16,7 +18,14 @@ import { TabsPage} from '../tabs/tabs';
 })
 export class SliderPage {
 
+  @ViewChild(Slides) slides: Slides;
+
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  goToSlide(){
+    this.slides.slideNext(500);
   }
 
   ionViewDidLoad() {

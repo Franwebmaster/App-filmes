@@ -8,6 +8,6 @@ import { SliderPage } from './slider';
   ],
   imports: [
     IonicPageModule.forChild(SliderPage),
-  ],
+  ]
 })
 export class SliderPageModule {}

@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+/*
+**
+**	Experience UI - 1
+**	Botões
+**
+**
+*/
+
+.io.button,
+.io.botao {
+	cursor: pointer;
+	display: inline-block;
+	min-height: 1em;
+	outline: none;
+	border: none;
+	vertical-align: baseline;
+	background: hsl(0, 0%, 93.7%);
+	color: rgba(0, 0, 0, 0.7);
+	font-family: Roboto, sans-serif, 'Lato';
+	margin: 0em 0.25em 0em 0em;
+	padding: 0.78571429em 1.5em 0.78571429em;
+	text-transform: none;
+	text-shadow: none;
+	font-size: 0.95857143rem;
+	font-weight: 400;
+	line-height: 1em;
+	font-style: normal;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0.28571429rem;
+	box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+	will-change: '';
+	-webkit-tap-highlight-color: transparent;
+}
+	.io.button:hover,
+	.io.botao:hover {
+		background-color: hsl(0, 0%, 94%);
+		background-image: none !important;
+		box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+		color: rgba(0, 0, 0, 0.9);
+		transition: all 200ms linear;
+	}
+.io.button:hover .icon,
+.io.botao:hover .icon {
+	opacity: 0.85;
+}
+
+
+.io.button:focus,
+.io.botao:focus {
+	background-color: hsl(0, 2%, 90.4%);
+	color: rgba(0, 0, 0, 0.9);
+	background-image: '' !important;
+	box-shadow: '' !important;
+}
+
+.io.button:focus .icon,
+.io.botao:focus .icon {
+	opacity: 0.85;
+}
+
+
+.io.button:active,
+.io.active.button:active,
+.io.botao:active,
+.io.active.botao:active {
+	background-color: hsl(0, 9.7%, 87.8%);
+	color: rgba(0, 0, 0, 0.9);
+	background-image: '' !important;
+	box-shadow: 0px 0px 0px 1px transparent inset, none;
+}
+
+
+/*
+**	Active para botão
+**
+*/
+.io.button.active,
+.io.botao.ativo {
+	background-color: hsl(0, 9.7%, 87.8%);
+	background-image: none;
+	box-shadow: 0px 0px 0px 1px transparent inset;
+	color: rgba(0, 0, 0, 0.75);
+}
+
+
+.io.button.active:hover,
+.io.botao.ativo:hover {
+	background-color: hsl(0, 6%, 83.7%);
+	background-image: none;
+	box-shadow: 0px 0px 0px 1px transparent inset;
+	color: rgba(0, 0, 0, 0.80);
+}
+
+
+.io.button.active:active,
+.io.botao.ativo:active {
+	background-color: hsl(0, 10.4%, 81.2%);
+	background-image: none;
+	box-shadow: 0px 0px 0px 1px transparent inset;
+	color: rgba(0, 0, 0, 0.80);
+}
+
+/*
+**	Botão com icone
+**
+*/
+.io.button > .icon:not(.button),
+.io.botao > .icone:not(.botao) {
+	height: 0.85714286em;
+	opacity: 0.8;
+	margin: 0em 0.42857143em 0em -0.21428571em;
+	vertical-align: '';
+	color: '';
+	transition: opacity 0.1s ease;
+	-webkit-transition: opacity 0.1s ease;
+}
+.io.button:not(.icon) > .icon:not(.button):not(.dropdown),
+.io.botao:not(.icone) > .icone:not(.botao):not(.dropdown) {
+	margin: 0em 0.42857143em 0em -0.21428571em;
+}
+
+
+/*
+**	Posição do botão
+**
+*/
+.io[class*="float left"].buttons,
+.io[class*="flutuar esquerda"].botoes,
+.io[class*="float left"].button,
+.io[class*="flutuar esquerda"].botao {
+	float: left;
+	margin-left: 0em;
+	margin-right: 0.25em;
+}
+
+
+.io[class*="float right"].buttons,
+.io[class*="flutuar direita"].botoes,
+.io[class*="float right"].button,
+.io[class*="flutuar direita"].botao {
+	float: right;
+	margin-left: 0em;
+	margin-right: 0.25em;
+}
+
+
+/*
+**	Botão compacto
+**
+*/
+.io.buttons.compact .button,
+.io.botoes.compacto .botao,
+.io.button.compact,
+.io.botao.compacto {
+	padding: 0.58928571em 1.125em 0.58928571em;
+}
+
+
+/*
+**	Tamanhos
+**
+*/
+.io.buttons.minu .button,
+.io.botoes.minu .botao,
+.io.button.minu,
+.io.botao.minu {
+	font-size: 0.78571429rem;
+}
+
+
+.io.buttons.mini .button,
+.io.botoes.mini .botao,
+.io.button.mini,
+.io.botao.mini {
+	font-size: 0.85714286rem;
+}
+
+
+.io.buttons.small .button,
+.io.botoes.pequeno .botao,
+.io.button.small,
+.io.botao.pequeno {
+	font-size: 0.92857143rem;
+}
+
+
+.io.buttons .button,
+.io.botoes .botao,
+.io.button,
+.io.botao {
+	font-size: 0.95857143rem;
+}
+
+
+.io.buttons.large .button,
+.io.botoes.largo .botao,
+.io.button.large,
+.io.botao.largo {
+	font-size: 1.14285714rem;
+}
+
+
+/*
+**	Somente ícone
+**
+*/
+.io.buttons.icon .button,
+.io.botoes.icone .botao,
+.io.button.icon,
+.io.botao.icone {
+	padding: 0.78571429em 0.78571429em 0.78571429em;
+}
+.io.buttons.icon .button > .icon,
+.io.botoes.icone .botao > .icone,
+.io.button.icon > .icon,
+.io.botao.icone > .icone {
+	opacity: 0.9;
+	margin: 0em !important;
+	vertical-align: top;
+}
+
+/***********************
+	Basico Azul
+************************/
+.io.buttons.basic-blue .button,
+.io.botoes.basic-azul .button,
+.io.button.basic-blue,
+.io.botao.basico-azul {
+	background: #4fc3f7;
+	color: rgba(255, 255, 255, 255);
+	border:  1px solid #4fc3f7;
+	transition: all ease 200ms;
+}
+
+
+
+/***********************
+	Basico com sombra
+************************/
+.io.buttons.basic-blue.shadow .button,
+.io.botoes.basic-azul.sombra .button,
+.io.button.basic-blue.shadow,
+.io.botao.basico-azul.sombra {
+	box-shadow: 0px 7px 20px -5px #ccc;
+}
+
+
+.io.buttons.basic-blue .button:hover,
+.io.butoes.basico-azul .botao:hover,
+.io.button.basic-blue:hover,
+.io.botao.basico-azul:hover {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-blue .button:focus,
+.io.butoes.basico-azul .botao:focus,
+.io.button.basic-blue:focus,
+.io.botao.basico-azul:focus {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-blue .button:active,
+.io.butoes.basico-azul .botao:active,
+.io.button.basic-blue:active,
+.io.botao.basico-azul:active {
+	border-color: #e4e7ed ;
+	background-color: #43A4F3 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+
+/***********************
+	Arredondado Azul
+************************/
+.io.buttons.round-blue .button,
+.io.botoes.redondo-azul .botao,
+.io.button.round-blue,
+.io.botao.redondo-azul {
+    background: #4fc3f7;
+    color: rgba(255, 255, 255, 255);
+    border: 1px solid #4fc3f7;
+    border-radius: 5rem;
+    padding: 0em;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+
+/***********************
+	Arredondado com sombra
+************************/
+.io.buttons.round-blue.shadow .button,
+.io.botoes.redondo-azul.sombra .button,
+.io.button.round-blue.shadow,
+.io.botao.redondo-azul.sombra {
+	box-shadow: 0px 9px 11px -5px #ccc;
+}
+
+
+.io.buttons.round-blue .button:hover,
+.io.butoes.redondo-azul .botao:hover,
+.io.button.round-blue:hover,
+.io.botao.redondo-azul:hover {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.round-blue .button:focus,
+.io.butoes.redondo-azul .botao:focus,
+.io.button.round-blue:focus,
+.io.botao.redondo-azul:focus {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.round-blue .button:active,
+.io.butoes.redondo-azul .botao:active,
+.io.button.round-blue:active,
+.io.botao.redondo-azul:active {
+	border-color: #e4e7ed ;
+	background-color: #43A4F3 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+
+/***********************
+	Basico Laranja
+************************/
+.io.buttons.basic-orange .button,
+.io.botoes.basic-laranja .button,
+.io.button.basic-orange,
+.io.botao.basico-laranja {
+    font-size: 1.5rem;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+	background: #FFA96A;
+	color: rgba(255, 255, 255, 255);
+	border:  1px solid #FFA96A;
+	transition: all ease 200ms;
+}
+
+
+
+/***********************
+	Basico com sombra
+************************/
+.io.buttons.basic-orange.shadow .button,
+.io.botoes.basic-laranja.sombra .button,
+.io.button.basic-orange.shadow,
+.io.botao.basico-laranja.sombra {
+	box-shadow: 0px 7px 20px -5px #ccc;
+}
+
+
+.io.buttons.basic-orange .button:hover,
+.io.butoes.basico-laranja .botao:hover,
+.io.button.basic-orange:hover,
+.io.botao.basico-laranja:hover {
+	border-color: #E8630A ;
+	background-color: #E8630A !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-orange .button:focus,
+.io.butoes.basico-laranja .botao:focus,
+.io.button.basic-orange:focus,
+.io.botao.basico-laranja:focus {
+	border-color: #E8630A ;
+	background-color: #E8630A !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-orange .button:active,
+.io.butoes.basico-laranja .botao:active,
+.io.button.basic-orange:active,
+.io.botao.basico-laranja:active {
+	border-color: #e4e7ed ;
+	background-color: #E8630A !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+
+/***********************
+	Arredondado Azul
+************************/
+.io.buttons.round-orange .button,
+.io.botoes.redondo-laranja .botao,
+.io.button.round-orange,
+.io.botao.redondo-laranja {
+    background: #FFA96A;
+    color: rgba(255, 255, 255, 255);
+    border: 1px solid #FFA96A;
+    border-radius: 5rem;
+    padding: 0em;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+
+/***********************
+	Arredondado com sombra
+************************/
+.io.buttons.round-orange.shadow .button,
+.io.botoes.redondo-laranja.sombra .button,
+.io.button.round-orange.shadow,
+.io.botao.redondo-laranja.sombra {
+	box-shadow: 0px 9px 11px -5px #ccc;
+}
+
+
+.io.buttons.round-blue .button:hover,
+.io.butoes.redondo-azul .botao:hover,
+.io.button.round-blue:hover,
+.io.botao.redondo-azul:hover {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.round-blue .button:focus,
+.io.butoes.redondo-azul .botao:focus,
+.io.button.round-blue:focus,
+.io.botao.redondo-azul:focus {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.round-blue .button:active,
+.io.butoes.redondo-azul .botao:active,
+.io.button.round-blue:active,
+.io.botao.redondo-azul:active {
+	border-color: #e4e7ed ;
+	background-color: #43A4F3 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}

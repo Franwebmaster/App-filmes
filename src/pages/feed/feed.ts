@@ -20,7 +20,7 @@ import { FilmeProvider } from '../../providers/filme/filme';
 export class FeedPage {
 
   //Array de filmes 
-  public listaFilmes:[] = <any>[];
+  public listaFilmes = new Array<any>();
 	//Minhas Variaveis
 	public nome:string = 'Fran Barros';
 
@@ -33,6 +33,8 @@ export class FeedPage {
     qtd_comentarios: "4",
     hora_comentario: "11h"
   }
+
+  array3 = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private filmeProvider: FilmeProvider) {
   }
