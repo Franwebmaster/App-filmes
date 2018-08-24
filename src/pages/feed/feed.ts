@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { FilmeProvider } from '../../providers/filme/filme';
+import { DetalhesPage } from '../detalhes/detalhes';
 
 /**
  * Generated class for the FeedPage page.
@@ -22,7 +23,10 @@ export class FeedPage {
   //Array de filmes 
   public listaFilmes = new Array<any>();
 	//Minhas Variaveis
-	public nome:string = 'Fran Barros';
+  public nome:string = 'Fran Barros';
+  public loader;
+  public refresh;
+  public isRefreshing: boolean = false;
 
   //Meu JSON
   public objetoFeed = {
@@ -34,15 +38,37 @@ export class FeedPage {
     hora_comentario: "11h"
   }
 
-  array3 = []
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private filmeProvider: FilmeProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private filmeProvider: FilmeProvider, public loadingCtrl: LoadingController) {
   }
 
+  carregaLoad() {
+    this.loader = this.loadingCtrl.create({
+      content: "Carregando filmes..."
+    });
+    this.loader.present();
+  }
 
-  ionViewDidLoad() {
-    // this.alertaMeuNome();
-    // this.somaDoisNumeros(1,3);
+  fechaLoad(){
+    this.loader.dismiss();
+  }
+
+  doRefresh(refresher) {
+    this.refresh = refresher;
+    this.isRefreshing = true;
+    this.carregaFilmes();
+  }
+
+  ionViewDidEnter() {
+    this.carregaFilmes();
+  }
+
+  abrirDetalhes(filme) {
+    console.log(filme)
+    this.navCtrl.push(DetalhesPage, {id: filme.id});
+  }
+
+  carregaFilmes(){
+    this.carregaLoad();
     this.filmeProvider.ultimosFilmes().subscribe(
         data=> {
           //Transformando o data em qualquer coisa
@@ -50,8 +76,19 @@ export class FeedPage {
           const objetoRetorno = JSON.parse(response._body);
           this.listaFilmes = objetoRetorno.results;
           console.log(objetoRetorno);
+
+          this.fechaLoad();
+          if (this.isRefreshing) {
+            this.refresh.complete();
+            this.isRefreshing = false;
+          }
         }, error => {
           console.log(error);
+          this.fechaLoad();
+          if (this.isRefreshing) {
+            this.refresh.complete();
+            this.isRefreshing = false;
+          }
         }
       )
   }

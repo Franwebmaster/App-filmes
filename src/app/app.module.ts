@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FilmeProvider } from '../providers/filme/filme';
+import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FilmeProvider } from '../providers/filme/filme';
     IonicModule.forRoot(MyApp),
     FeedPageModule,
     SliderPageModule,
-    HttpModule
+    HttpModule,
+    DetalhesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

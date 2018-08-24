@@ -6,11 +6,11 @@ import { NavController, Platform } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  pet: string = "kittens";
-  isAndroid: boolean = false;
+  // pet: string = "kittens";
+  // isAndroid: boolean = false;
 
   constructor(public navCtrl: NavController, platform: Platform) {
-    this.isAndroid = platform.is('android');
+    // this.isAndroid = platform.is('android');
   }
 
 }

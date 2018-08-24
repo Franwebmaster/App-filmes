@@ -23,4 +23,8 @@ export class FilmeProvider {
   	return this.http.get(this.baseUrlAPI + "/movie/popular?api_key=bb087c7f8538a11e3a56739e6609c1eb");
   }
 
+  detalesFilmes(filmeId){
+  	return this.http.get(this.baseUrlAPI + `/movie/${filmeId}?api_key=bb087c7f8538a11e3a56739e6609c1eb`);
+  }
+
 }

@@ -1,32 +1,17 @@
-<div padding>
-    <ion-segment [(ngModel)]="pet">
-      <ion-segment-button value="kittens">
-        Kittens
-      </ion-segment-button>
-      <ion-segment-button value="puppies">
-        Puppies
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-  
-  <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'kittens'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/logo.png">
-        </ion-thumbnail>
-        <h2>Luna</h2>
-      </ion-item>
-      ...
-    </ion-list>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
 
-    <ion-list *ngSwitchCase="'puppies'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/ica-slidebox-img-1.png">
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      ...
-    </ion-list>
-  </div>
+<ion-content padding>
+  <h2>App Ionic</h2>
+  <p>
+    This starter project comes with simple tabs-based layout for apps
+    that are going to primarily use a Tabbed UI.
+  </p>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p>
+</ion-content>

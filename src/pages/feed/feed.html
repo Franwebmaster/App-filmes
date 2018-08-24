@@ -1,4 +1,9 @@
 <ion-content padding>
+    <!-- Refresh -->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher> 
+
     <ion-card *ngFor="let filme of listaFilmes">
 
       <ion-item>
@@ -9,7 +14,7 @@
         <p>{{filme.release_date }}</p>
       </ion-item>
 
-      <img [src]="'https://image.tmdb.org/t/p/original/' + filme.backdrop_path" >
+      <img [src]="'http://image.tmdb.org/t/p/w500/' + filme.backdrop_path" >
 
       <ion-card-content>
         <p>{{ filme.overview }}</p>
@@ -34,6 +39,8 @@
           </ion-note>
         </ion-col>
       </ion-row>
+
+      <button class="io botao basico-azul"(click)="abrirDetalhes(filme)">Detalhes</button>
 
     </ion-card>
 </ion-content>
