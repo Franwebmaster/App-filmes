@@ -1,4 +1,31 @@
 page-slider {
+	//Descrição
+	.slide-zoom {
+		height: 100%;
+	}
+	.descricao {
+		font-family: 'Nunito', sans-serif;
+		h1 {
+			font-size: 2.3rem;
+			font-weight: 400;
+			color: #3A3A59;
+			margin: 0;
+		}
+
+		p {
+			font-size: 2rem;
+			font-weight: 300;
+			color: #A8A8B7;
+		}
+	}
+
+	.botao {
+		button {
+			margin-top: 30px !important;
+		}
+	}
+
+	//Dots pointers
 	.swiper-pagination-bullet {
 		background: #E9E2D0;
 		opacity: 1;
@@ -7,6 +34,6 @@ page-slider {
 	.swiper-pagination-bullet-active {
 		width: 2rem;
 		border-radius: 5rem;
-		background: #E8630A;
+		background: #EF3F61;
 	}
 }

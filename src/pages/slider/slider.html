@@ -8,19 +8,55 @@
 	<ion-slides pager>
 
 	  <ion-slide class="slider">
-	  	<img src="../../assets/imgs/slide-01.svg" alt="Slider 01" />
-	    <button class="io botao redondo-laranja icone" (click)="goToSlide()"><i class="icone fa fa-angle-right" aria-hidden="true"></i></button>
-	  </ion-slide>
+			<section class="cabecalho">
+				<div class="imagem-cabecalho">
+					<img src="../../assets/imgs/slide-01.svg" alt="Slider 01" />
+				</div>
+			</section>
+			<section class="descricao">
+				<header>
+					<h1>Simplicidade</h1>
+				</header>
+				<p>Totalmente focado no UX
+					sem perder aquele
+					toque de UI</p>
+			</section>
+	    <button class="io botao redondo-rosa icone sombra" (click)="goToSlide()"><i class="icone fa fa-angle-right" aria-hidden="true"></i></button>
+	  </ion-slide><!-- Slider -->
 
 	  <ion-slide class="slider">
-	  	<img src="../../assets/imgs/slide-02.svg" alt="Image 02" />
-	    <button class="io botao redondo-laranja icone" (click)="goToSlide()"><i class="icone fa fa-angle-right" aria-hidden="true"></i></button>
-	  </ion-slide>
+	  	<section class="cabecalho">
+				<div class="imagem-cabecalho">
+					<img src="../../assets/imgs/slide-01.svg" alt="Slider 02" />
+				</div>
+			</section>
+			<section class="descricao">
+				<header>
+					<h1>Praticidade</h1>
+				</header>
+				<p>A ferramenta mais fácil para<br>
+				procurar oque você deseja<br> sobre
+				aquele filme
+				</p>
+			</section>
+	    <button class="io botao redondo-rosa icone sombra" (click)="goToSlide()"><i class="icone fa fa-angle-right" aria-hidden="true"></i></button>
+	  </ion-slide><!-- Slider -->
 
 	  <ion-slide class="slider">
-	  	<img src="../../assets/imgs/slide-03.svg" alt="Image 03" />
-	    <button class="io botao basico-laranja sombra" (click)="irParaTabs()">Entrar</button>
-	  </ion-slide>
+	  	<section class="cabecalho">
+				<div class="imagem-cabecalho">
+					<img src="../../assets/imgs/slide-03.svg" alt="Slider 03" />
+				</div>
+			</section>
+			<section class="descricao">
+				<header>
+					<h1>Vamos nessa guerreiro</h1>
+				</header>
+			</section>
+			<div class="botao">
+					<button class="io botao basico-rosa sombra" (click)="irParaTabs()">Entrar</button>
+			</div>
+	  </ion-slide><!-- Slider -->
 
 	</ion-slides>
 </ion-content>
